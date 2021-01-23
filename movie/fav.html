@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>Favorites</title>
+    <style>
+ 
+      
+      html {
+        overflow-x: hidden;
+      }
+      body{
+        overflow-x: hidden;
+        min-height: 100vh;
+        position: relative;
+        margin: 0;
+        box-sizing: border-box;
+        padding-bottom: 2rem;
+        background-color: #000000;
+      }
+      nav {
+        background-color: #800000;
+      }
+      .material-icons {
+        vertical-align: middle;
+      }
+      .icon-size {
+        font-size: 1.5rem;
+      }
+      .card{
+          border: none;
+      }
+      .list-group-custom .list-group-item{
+        background-color:#000000;
+        border-color: #800000;
+      }
+      .trash{
+        background-color: transparent;
+        border: none;
+      }
+      
+      footer {
+        background-color: #800000;
+        height: 3rem;
+        margin-top: 2%;
+        position: absolute;
+        bottom: 0;
+    
+      }
+    
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand text-white">
+        <i class="material-icons icon-size">movie_filter</i>
+        Movie Cruiser</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="movie-list-customer.html"
+              >Movies</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="favorites.html"
+              >Favorites</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid mb-4">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-xl-3 col-12">
+
+        <h2 class="text-left font-weight-normal text-white">Favorites</h2>
+        </div></div>
+
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-10 col-xl-3 col-12">
+            <div class="card-deck">
+              <div class="card mt-2">
+                <ul class="list-group list-group-custom">
+                  <li class="list-group-item" id="item1">
+                      
+                   <h5 class="text-warning">Tenet
+                    <span class="float-right" id="count">                   
+                      <button onclick="document.getElementById('item1').style.display='none';document.getElementById('count-text').innerHTML='1';isListEmpty();" class="trash float-right"><i class="material-icons text-muted" id="cart">delete_forever</i></button>
+                     </span>
+                   </h5>
+                </li>
+                  <li class="list-group-item" id="item2">
+                    <h5 class="text-warning"> Avengers Infinity War
+                        <span class="float-right" id="count">                        
+                          <button onclick="document.getElementById('item2').style.display='none';document.getElementById('count-text').innerHTML='1';isListEmpty();" class="trash float-right"><i class="material-icons text-muted" id="cart">delete_forever</i></button>
+                     </span>
+                        </h5>
+                  </li>
+                  <li class="list-group-item">
+                    <h4 class="font-weight-normal text-white">Total Favorites
+                        <span class="float-right mr-2 pr-1" id="cost"><h5 id="count-text" class="text-white">2</h5>
+
+                    </h4>
+
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <footer class="text-white text-lg-start container-fluid">
+        <!-- Copyright -->
+        Copyright 2021
+  
+        <!-- Copyright -->
+      </footer>
+      <script>
+        function isListEmpty(){
+          var item1Display = document.getElementById("item1").style.display;
+          var item2Display = document.getElementById("item2").style.display;
+          if(item1Display=="none" && item2Display=="none")
+          window.location.href = "no-favorite.html";
+        }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Edit Movie Details</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+        min-height: 100vh;
+        position: relative;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: #000000;
+      }
+      .material-icons {
+        vertical-align: middle;
+      }
+      .icon-size {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        background-color: #800000;
+      }
+
+      #save {
+        background-color: #800000;
+        border-width: 0;
+      }
+      footer {
+        background-color: #800000;
+        height: 3rem;
+        margin-top: 2%;
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100 text-warning">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand text-white">
+        <i class="material-icons icon-size">movie_filter</i>
+        Movie Cruiser</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="movie-list-admin.html"
+              >Movies</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid mb-4">
+      <h1 class="font-weight-normal text-white mb-4">Edit Movie Details</h1>
+      <form
+        name="edit-menu-form"
+        onsubmit="return validateForm()"
+        action="edit-movie-success.html"
+      >
+        <div class="form-row">
+          <div class="form-group col-12">
+            <label for="movieName">Movie Name</label>
+            <input type="text" class="form-control" id="movieName" />
+            <label class="text-danger" id="name-error"></label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-xl-3 col-sm-12">
+            <label for="genre">Genre</label>
+            <select type="text" class="form-control" id="genre">
+              <option></option>
+              <option>Science Fiction</option>
+              <option>Adventure</option>
+              <option>Comedy</option>
+              <option>Superhero</option>
+              <option>Romance</option>
+              <option>Thriller</option>
+              <option>Horror</option>
+              <option>Drama</option>
+              <option>Action</option>
+            </select>
+            <label class="text-danger" id="genre-error"></label>
+          </div>
+          <div class="form-group col-xl-3 col-sm-12">
+            <label for="dateOfLaunch">Date Of Launch</label>
+            <input type="date" id="dateOfLaunch" class="form-control" />
+            <label class="text-danger" id="date-error"></label>
+          </div>
+          <div class="form-group col-xl-3 col-sm-12">
+            <label for="rating">Rating</label>
+            <input type="text" class="form-control" id="rating" />
+            <label class="text-danger" id="rating-error"></label>
+          </div>
+          <div class="form-group col-xl-3 col-sm-12">
+            <label for="active">Active</label><br />
+            <label class="radio-inline">
+              <input type="radio" name="active" id="Yes" />
+              Yes
+            </label>
+            <label class="radio-inline ml-3">
+              <input type="radio" name="active" id="No" />
+              No
+            </label>
+            <label class="d-block text-danger" id="active-error"></label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-12">
+            <label for="teaserUrl">Teaser URL</label>
+            <input type="text" class="form-control" id="teaserUrl" />
+            <label class="text-danger" id="teaser-error"></label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-xl-1 col-sm-12">
+            <input
+              type="submit"
+              class="btn btn-primary"
+              value="Save"
+              id="save"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer class="text-white text-lg-start container-fluid">
+      <!-- Copyright -->
+      Copyright 2021
+
+      <!-- Copyright -->
+    </footer>
+    <script>
+      function validateForm() {
+        var movieName = document.getElementById("movieName");
+        var rating = document.getElementById("rating");
+        var dateOfLaunch = document.getElementById("dateOfLaunch");
+        var genre = document.getElementById("genre");
+        var active = document.getElementsByName("active");
+        var teaserUrl = document.getElementById("teaserUrl");
+        var flag = true;
+        console.log(dateOfLaunch.value);
+        document.getElementById("name-error").innerHTML = "";
+        document.getElementById("rating-error").innerHTML = "";
+        document.getElementById("date-error").innerHTML = "";
+        document.getElementById("genre-error").innerHTML = "";
+        document.getElementById("active-error").innerHTML = "";
+        document.getElementById("teaser-error").innerHTML = "";
+
+        if (movieName == null || movieName.value == "") {
+          document.getElementById("name-error").innerHTML =
+            "Movie name is required.";
+          flag = false;
+        }
+
+        if (rating.value != "" && !/^((\d?)|(10))(\.\d{1})?$/.test(rating.value)) {
+          document.getElementById("rating-error").innerHTML =
+            "Rating can only contain a number between 0-10.";
+          flag = false;
+        }
+        if (
+          dateOfLaunch == null ||
+          !/^((19|20)\d{2})\-(0[1-9]|1[0-2])\-(0[1-9]|1\d|2\d|3[01])$/.test(
+            dateOfLaunch.value
+          )
+        ) {
+          document.getElementById("date-error").innerHTML =
+            "Incorrect date format.";
+          flag = false;
+        }
+        if (genre == null || genre.value == "") {
+          document.getElementById("genre-error").innerHTML =
+            "Select atleast one genre.";
+          flag = false;
+        }
+        if (!active[0].checked && !active[1].checked) {
+          document.getElementById("active-error").innerHTML =
+            "Select in stock status.";
+          flag = false;
+        }
+        if (teaserUrl == null || teaserUrl.value == "") {
+          document.getElementById("teaser-error").innerHTML =
+            "Teaser URL is required.";
+          flag = false;
+        }
+
+        return flag;
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

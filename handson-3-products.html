@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Products</title>
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+      }
+      .material-icons {
+        vertical-align: middle;
+      }
+      .icon-size {
+        font-size: 0.75rem;
+      }
+
+      #benefits-div {
+        background-color: #ccddcb;
+      }
+      #login-div {
+        background-color: #ddccde;
+      }
+      .date {
+        font-size: smaller;
+        color: #808080;
+      }
+      .event {
+        font-weight: normal;
+        color: #86728d;
+      }
+      .badge {
+        vertical-align: middle;
+        font-size: 0.75rem;
+      }
+      #cart {
+        font-size: 1rem;
+      }
+      #offer {
+        color: #a0433d;
+        font-size: 1rem;
+      }
+      #favorite {
+        color: #808080;
+      }
+      #favorite:hover {
+        color: #ff0000;
+        cursor: pointer;
+      }
+      .card {
+        max-width: 18rem;
+      }
+      footer {
+        height: 3rem;
+        margin-top: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand text-white">hTrack</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Home.html">
+              <i class="material-icons">home</i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Goals</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="col-sm-1">
+      <h5>Products</h5>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="card-deck">
+            <div class="card h-100" style="width: 18rem">
+              <img
+                src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                class="card-img-top"
+                alt="Coco Oil"
+              />
+              <div class="card-body">
+                <h6 class="card-title">
+                  Coco Oil(200g)
+                  <span class="badge badge-success">
+                    4.4 <i class="material-icons icon-size">star</i></span
+                  >
+                </h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Rs. 200.00
+                  <small class="text-muted"
+                    ><del>Rs. 250.00</del> 20%
+                    <i id="offer" class="material-icons icon-size"
+                      >new_releases</i
+                    ></small
+                  >
+                </h6>
+
+                <small class="card-text"
+                  >Escape is an innovative, skin-loving formulation, formulated
+                  with certified Fair Trade Cold Pressed Organic Coconut Oil,
+                  produced sustainably in the Pacific islands and supporting
+                  local communities.</small
+                >
+
+                <br /><br />
+                <a href="#" class="btn btn-success"
+                  ><i class="material-icons" id="cart">shopping_cart</i> Add to
+                  Cart</a
+                >
+                <i class="material-icons ml-5" id="favorite">favorite_border</i>
+              </div>
+            </div>
+            <div class="card h-100" style="width: 18rem">
+              <img
+                src="https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1115&q=80"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h6 class="card-title">
+                  Mad About Waves (300 ml)
+                  <span class="badge badge-warning"
+                    >3.5 <i class="material-icons icon-size">star</i></span
+                  >
+                </h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Rs. 150.00
+                  <small class="text-muted"
+                    ><del>Rs. 200.00</del> 25%
+                    <i id="offer" class="material-icons icon-size"
+                      >new_releases</i
+                    ></small
+                  >
+                </h6>
+
+                <small class="card-text"
+                  >Mad About Waves is a hoistic care and styling regime
+                  dedicated to beautifying every wave type. The range is
+                  designed to tame, respect and protect the hair - embracing
+                  each unique pattern, for breezy waves that last.</small
+                >
+
+                <br /><br />
+                <a href="#" class="btn btn-success"
+                  ><i class="material-icons" id="cart">shopping_cart</i> Add to
+                  Cart</a
+                >
+                <i class="material-icons ml-5" id="favorite">favorite_border</i>
+              </div>
+            </div>
+            <div class="card h-100" style="width: 18rem">
+              <img
+                src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h6 class="card-title">
+                  Maui Moisture (Bamboo Fibers Shampoo 305ml)
+                  <span class="badge badge-warning"
+                    >3.1 <i class="material-icons icon-size">star</i></span
+                  >
+                </h6>
+                <h6 class="card-subtitle mb-2 text-muted">Rs. 455.00</h6>
+
+                <small class="card-text"
+                  >Lightweight spray conditioner suitable as a leave-in for wavy
+                  hair types. With Aquarine Complex, the formula detangles,
+                  hydrates and gives lasting definition, creating a soft,
+                  beach-wave look. Strengthens the hair* and provides heat
+                  protection up to 80°C°.</small
+                >
+
+                <br /><br />
+                <a href="#" class="btn btn-success"
+                  ><i class="material-icons" id="cart">shopping_cart</i> Add to
+                  Cart</a
+                >
+                <i class="material-icons ml-5" id="favorite">favorite_border</i>
+              </div>
+            </div>
+            <div class="card h-100" style="width: 18rem">
+              <img
+                src="https://images.unsplash.com/photo-1559056199-5a47f60c5053?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h6 class="card-title">
+                  BattleCreek Coffee (200g)
+                  <span class="badge badge-danger"
+                    >2.5 <i class="material-icons icon-size">star</i></span
+                  >
+                </h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Rs. 150.00
+                  <small class="text-muted"
+                    ><del>Rs. 200.00</del> 25%
+                    <i id="offer" class="material-icons icon-size"
+                      >new_releases</i
+                    ></small
+                  >
+                </h6>
+
+                <small class="card-text"
+                  >This blend made from 100% specially selected beans creates an
+                  intensly aromatic flavor that makes it the ultimate coffee to
+                  look forward to at any time of the day.</small
+                >
+
+                <br /><br />
+                <a href="#" class="btn btn-success"
+                  ><i class="material-icons" id="cart">shopping_cart</i> Add to
+                  Cart</a
+                >
+                <i class="material-icons ml-5" id="favorite">favorite_border</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card-deck">
+            <div class="card h-100" style="width: 18rem">
+              <img
+                src="https://im.idiva.com/content/2020/Mar/Face-oil-iDiva-1_5e7c45807e371.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h6 class="card-title">
+                  Lapis Facial Oil (100ml)
+                  <span class="badge badge-success"
+                    >4.8 <i class="material-icons icon-size">star</i></span
+                  >
+                </h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Rs. 750.00
+                  <small class="text-muted"
+                    ><del>Rs. 1000.00</del> 25%
+                    <i id="offer" class="material-icons icon-size"
+                      >new_releases</i
+                    ></small
+                  >
+                </h6>
+
+                <small class="card-text"
+                  >Lapis Facial Oil holds a component called Azulene which aids
+                  in soothing dry irritated skin, reducing the appearance of
+                  redness and balancing skin. Formulated for combination, oily
+                  and blemish-prone skin types or any skin in nedd of balancing
+                  hydration.</small
+                >
+
+                <br /><br />
+                <a href="#" class="btn btn-success"
+                  ><i class="material-icons" id="cart">shopping_cart</i> Add to
+                  Cart</a
+                >
+                <i class="material-icons ml-5" id="favorite">favorite_border</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light text-lg-start container-fluid">
+      Copyright 2019
+    </footer>
+
+  </body>
+</html>

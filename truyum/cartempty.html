@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Cart</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"
+      type="text/javascript"
+    ></script>
+    <link
+      href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+        min-height: 100vh;
+        position: relative;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .material-icons {
+        vertical-align: middle;
+      }
+      .icon-size {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        background-color: orangered;
+      }
+      .wrapper {
+        text-align: center;
+      }
+      .heading {
+        width: 50%;
+        display: inline-block;
+        text-align: left;
+      }
+      .message {
+        background-color: #f7d7da;
+        border-radius: 0.25rem;
+        width: 50%;
+        display: inline-block;
+      }
+      .message-text {
+        color: darkred;
+        margin-top: 50%;
+      }
+
+      footer {
+        background-color: orangered;
+        height: 3rem;
+        margin-top: 2%;
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand text-white">
+        <i class="material-icons icon-size">local_dining</i>
+        truYum</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="menu-item-list-customer.html"
+              >Menu Items</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="cart.html">Cart</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid mb-4">
+      <div class="wrapper">
+        <h1 class="font-weight-normal heading">Cart</h1>
+
+        <div class="p-3 mb-2 message">
+          No items in cart. Use 'Add to Cart' option in menu item list.
+        </div>
+      </div>
+    </div>
+    <footer class="text-white text-lg-start container-fluid">
+      <!-- Copyright -->
+      Copyright 2019
+
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>
